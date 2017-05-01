@@ -68,6 +68,7 @@ Here are some examples of information about a chat that a user may be interested
  * Chat activity over time
  * Member activity over time
  * Member who gets the most/least responses
+ * Average number of responses to a conversation starter of members of a chat
  
 ## To do:
  * Create comprehensive list of possible chat activity.
