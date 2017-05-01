@@ -1,4 +1,9 @@
+**WhatsApp does not endorse or sponsor this project.**
+
 # whatsapp-stats
+
+<img src="/assets/whatsapp-stats-logo.png" width="200px"></img>
+
 A program for generating statistics about a WhatsApp chat.
 
 (On hold until the 12th of May)
