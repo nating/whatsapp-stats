@@ -1,5 +1,5 @@
 # whatsapp-stats
-A program for generating statistics about a whatsapp chat.
+A program for generating statistics about a WhatsApp chat.
 
 (On hold until the 12th of May)
 
