@@ -1,6 +1,6 @@
 **WhatsApp does not endorse or sponsor this project.**
 
-# whatsapp-stats
+# WhatsApp Stats
 
 <img src="/assets/whatsapp-stats-logo.png" width="150px"></img>
 
@@ -9,11 +9,11 @@ A program for generating statistics about a WhatsApp chat.
 (On hold until the 12th of May)
 
 ## Overview
-Whatsapp offers users the ability to export chats as text files.  
+WhatsApp offers users the ability to export chats as text files.  
 These text files' format make it easy to parse, and to gather interesting data from them.
  
 ## Chat Activity
-In a whatsapp chat's text file, each entry represents some activity.  
+In a WhatsApp chat's text file, each entry represents some activity.  
 
 Entries take the form:
 
