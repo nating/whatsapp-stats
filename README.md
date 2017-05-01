@@ -2,7 +2,7 @@
 
 # whatsapp-stats
 
-<img src="/assets/whatsapp-stats-logo.png" width="200px"></img>
+<img src="/assets/whatsapp-stats-logo.png" width="150px"></img>
 
 A program for generating statistics about a WhatsApp chat.
 
