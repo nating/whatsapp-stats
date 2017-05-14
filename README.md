@@ -4,7 +4,7 @@
 
 <img src="/assets/whatsapp-stats-logo.png" width="150px"></img>
 
-A program for generating statistics about a WhatsApp chat.
+A program for visualising data from a WhatsApp chat.
 
 ## Overview
 WhatsApp offers users the ability to export chats as text files.  
