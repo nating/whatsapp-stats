@@ -1,0 +1,121 @@
+
+body{
+	font-family: "HelveticaNeue-Light";
+	font-size: 17px;
+	text-align: center;
+}
+
+/*---------------Background Gradient-----------------*/
+html{
+	height:100%;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#67fa82+0,61f57b+22,61f57b+22,42db5c+51,36d04f+91,33ce4d+100 */
+	background: rgb(103,250,130); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(103,250,130,1) 0%, rgba(97,245,123,1) 22%, rgba(97,245,123,1) 22%, rgba(66,219,92,1) 51%, rgba(54,208,79,1) 91%, rgba(51,206,77,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(103,250,130,1) 0%,rgba(97,245,123,1) 22%,rgba(97,245,123,1) 22%,rgba(66,219,92,1) 51%,rgba(54,208,79,1) 91%,rgba(51,206,77,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(103,250,130,1) 0%,rgba(97,245,123,1) 22%,rgba(97,245,123,1) 22%,rgba(66,219,92,1) 51%,rgba(54,208,79,1) 91%,rgba(51,206,77,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67fa82', endColorstr='#33ce4d',GradientType=0 ); /* IE6-9 */
+}
+
+
+
+#title {
+	width: 100%;
+    display: block;
+    color: #075E54;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+#drop_zone {
+	margin:auto;
+	border-style: dashed;
+	border-color: #128C7E;
+	width: 200px;
+}
+
+/*------------------------Nav bar CSS----------------------*/
+
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #075E54;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    margin:10px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #128C7E;
+    color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Style the links inside the navigation bar */
+.topnav input {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 10px;
+    background-color: #25D366;
+    margin:10px;
+}
+
+/* Change the color of links on hover */
+.topnav input:hover {
+    background-color: #128C7E;
+    color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav input.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/*
+
+//---------------Whatsapp Colors---------------------
+
+Teal Green
+#075E54
+#128C7E
+
+Light Green
+#25D366
+
+White
+#FFFFFF
+
+Outgoing Chat Bubble
+#DCF8C6
+
+Checkmark Blue
+#34B7F1
+
+Chat Background
+#ECE5DD
+
+*/
