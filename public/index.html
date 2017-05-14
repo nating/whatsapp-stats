@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+<link rel="stylesheet" href="whatsapp-stats.css">
+</head>
+<body>
+<div id="title">WhatsApp Stats</div>
+<div class="topnav" id="myTopnav">
+	<a href="#home">Visualize new chat</a>
+	<a href="#users">Users</a>
+	<a href="#chat">Overview</a>
+	<a href="#about">Chat Content</a>
+	<a href="#about">Activity</a>
+</div>
+<div style="text-align: left; margin:10px">Select the chat .txt file to see the data. (Your chat data will not be sent to anyone or leave your computer at all!)</div>
+<input type="file" id="files" name="files[]" multiple />
+<div id="drop_zone"><img src="cloud.png" width="150px" margin="auto"></img></div>
+<output id="list"></output>
+
+
+<button type="button" onclick="getMembers();">To print members to the console.</button>
+<button type="button" onclick="doTheThing();">To do the thing.</button>
+
+</body>
+<script src="pouchdb-nightly.min.js"></script>
+<script src="chat-parse.js"></script>
+
+<script>
+
+  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+
+
+</script>
+<script>
+
+ //document ready
+
+</script>
+</html>
+
+
+
+
