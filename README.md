@@ -84,8 +84,3 @@ Activity              |Form in chat exported without media
 |Document             |`<user>': <document omitted>'`
 |Contact              |`<user>': <Contact card omitted>'`
 |Text                 |`<user>': '<message>`
-
-## To do:
- * Write parsing code.
- * Create list of interesting queries.
- * Come up with an interesting way to display data.
