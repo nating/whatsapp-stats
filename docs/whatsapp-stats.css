@@ -16,7 +16,16 @@ html{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67fa82', endColorstr='#33ce4d',GradientType=0 ); /* IE6-9 */
 }
 
+#chatTitle{
+	margin:auto;
+	margin:10px;
+	font-size:30px;
+	text-align: center;
+}
 
+#chatStats{
+	background-color: #ECE5DD;
+}
 
 #title {
 	width: 100%;
@@ -26,6 +35,7 @@ html{
     text-decoration: none;
     font-size: 25px;
     border-radius: 10px;
+    text-align:center;
 }
 
 #drop_zone {
@@ -92,6 +102,27 @@ html{
 .topnav input.active {
     background-color: #4CAF50;
     color: white;
+}
+
+/*---------------------Stacked Horizontal Bar Chart CSS----------------------*/
+
+
+.axis text {
+  font: 7px sans-serif;
+}
+.axis line,
+.axis path {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.path-line {
+  fill: none;
+  stroke: yellow;
+  stroke-width: 1.5px;
+}
+svg {
+  background: #ECE5DD;
 }
 
 /*

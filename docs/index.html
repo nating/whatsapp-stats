@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+<link rel="stylesheet" href="whatsapp-stats.css">
+</head>
+<body>
+	<div id="title">WhatsApp Stats</div>
+	<!-- This is where different queryies can be selected (once the app has the functionality of different queries!)
+	<div class="topnav" id="myTopnav">
+		<a href="#home">Visualize new chat</a>
+		<a href="#users">Users</a>
+		<a href="#chat">Overview</a>
+		<a href="#about">Chat Content</a>
+		<a href="#about">Activity</a>
+	</div>
+	-->
+	<div id="main-content">
+		<div id="query-title" style=" margin:10px">Select the chat .txt file to see the data. (Your chat data will not be sent to anyone or leave your computer at all!)</div>
+		<input type="file" id="files" name="files[]" accept=".txt" margin="auto"/>
+		<div id="drop_zone"><img src="cloud.png" width="150px" margin="auto"></img></div>
+		<output id="list"></output>
+		<button id="visualiseButton" type="button" onclick="visualise(); seeActivityCountForUsers();" disabled>Visualize!</button>
+	</div>
+</body>
+<script src="chat-parse.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+</html>
+
+
+
+
