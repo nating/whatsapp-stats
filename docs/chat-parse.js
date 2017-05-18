@@ -61,7 +61,6 @@ function getMembers(){
             }
         }
         var members = Array.from(set);
-        console.log("There have been "+j+" members in this chat:\n"+members);
         return members;
     }
 }
@@ -79,12 +78,9 @@ function getChatNames(){
                 j++;
                 preIndex = lines[i].indexOf('changed the subject to') + 24; //There are 24 characters from the start of that string to the subject
                 var name = lines[i].substring(preIndex,lines[i].length-2);
-                console.log(getUser(lines[i])+":");
-                console.log(lines[i]);
                 chatNames.push(name);
             }
         }
-        console.log("There have been "+j+" names of this chat:\n"+chatNames);
         return chatNames;
     }
 }
@@ -129,7 +125,6 @@ function getGeneralChatStats(){
                 chat['total-activity']++;
             }
         }
-        console.log(chat);
 
         var mainc = document.getElementById("main-content");
         var chatStats = document.createElement("div");
@@ -201,6 +196,12 @@ function seeActivityCountForUsers(){
             key: key,
             element: 'stacked-bar'
         });
+
+
+        var legend = document.createElement("div");
+        legend.setAttribute('id','legend');
+        legend.innerHTML = "<div style='width:50%;margin:auto;background-color:#ECE5DD;'>(<span style='color:#25D366;'>Messages </span><span style='color:#34B7F1;'>Images </span><span style='color:#f47a42;'>Video </span><span style='color:#e534bf;'>Audio </span><span style='color:#35a082;'>Other</span>)</div>";
+        mainc.parentNode.appendChild(legend, mainc);
     }
 }
 
