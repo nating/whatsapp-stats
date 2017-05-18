@@ -180,7 +180,12 @@ function seeActivityCountForUsers(){
 
         var key = ["texts","images","audio","video","other"];
 
-        console.log(users);
+        //Remove activity that doesn't count as any user's activity (group name or icon change / addition or removal of members)
+        for(var z=0;z<users.length;z++) {
+            if(users[z]['name']=='Non-messages'){
+                users.splice(z,1);
+            }
+        }
 
         var mainc = document.getElementById("main-content");
         var barChart = document.createElement("div");
