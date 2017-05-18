@@ -4,7 +4,9 @@
 
 <img src="/assets/whatsapp-stats-logo.png" width="150px"></img>
 
-A program for visualising data from a WhatsApp chat.
+A web app for visualising data from a WhatsApp chat.
+
+The current version can be used [here](https://nating.github.io/whatsapp-stats).
 
 ## Overview
 WhatsApp offers users the ability to export chats as text files.  
@@ -35,14 +37,23 @@ To gain insight into the statistics of a chat, it is necessary to define some te
  
 ## Queries
 
+Queries about the data in the whatsapp chat are the heart of the project. Implementing each query to find figures is easy. The difficult/time consuming part is to integrated the query into the app by representing the data in an easy-to-read nice way.
+
 Here are some examples of information about a chat that a user may be interested in:
- * Message count of a chat
- * Image count of a chat
- * Audio file count of a chat
- * Average message count per day/month/year
+
+**Integrated**
  * Message counts of members of a chat
  * Image count of members of a chat
  * Audio file count of members of a chat
+
+**Implemented**
+ * Message count of a chat
+ * Image count of a chat
+ * Audio file count of a chat
+ * Video count of a chat
+ 
+**Ideas**
+ * Average message count per day/month/year
  * Emoji count of members of a chat
  * Conversation starters/finishers count of members of a chat
  * Conversation count of members of a chat
