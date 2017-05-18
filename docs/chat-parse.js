@@ -200,7 +200,7 @@ function seeActivityCountForUsers(){
 
         var legend = document.createElement("div");
         legend.setAttribute('id','legend');
-        legend.innerHTML = "<div style='width:50%;margin:auto;background-color:#ECE5DD;'>(<span style='color:#25D366;'>Messages </span><span style='color:#34B7F1;'>Images </span><span style='color:#f47a42;'>Video </span><span style='color:#e534bf;'>Audio </span><span style='color:#35a082;'>Other</span>)</div>";
+        legend.innerHTML = "<div style='width:50%;margin:auto;background-color:#ECE5DD;'>(<span style='color:#25D366;'>Messages </span><span style='color:#34B7F1;'>Images </span><span style='color:#f47a42;'>Audio </span><span style='color:#e534bf;'>Video </span><span style='color:#35a082;'>Other</span>)</div>";
         mainc.parentNode.appendChild(legend, mainc);
     }
 }
