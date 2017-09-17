@@ -67,7 +67,9 @@ Here are some examples of information about a chat that a user may be interested
  * Member who gets the most/least responses
  * Average number of responses to a conversation starter of members of a chat
  
-## Parsing chat activity
+## Parsing chat activity 
+
+### iOS
 A WhatsApp chat's text file is made up of lines of activity. Each activity is represented by its own line and takes the form:
 ```
 dd/mm/yy, hh:mm:ss: <activity>
@@ -95,3 +97,6 @@ Activity              |Form in chat exported without media
 |Document             |`<user>': <document omitted>'`
 |Contact              |`<user>': <Contact card omitted>'`
 |Text                 |`<user>': '<message>`
+
+### Android
+Chats exported from Android have a different format, so parsing them is different. I have not ventured as far as implementing the parsing of chats exported from Android, as I have an iPhone and only really attempted this project because a casual interest. If you wish to expand the repo to deal with chats exported from other Operating Systems, I encourage you to make a pull reequest!
