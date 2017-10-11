@@ -1,6 +1,6 @@
 **WhatsApp does not endorse or sponsor this project.**
 
-# WhatsApp Stats
+# WhatsApp Stats [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 <img src="/assets/whatsapp-stats-logo.png" width="150px"></img>
 
