@@ -6,7 +6,7 @@
 
 A web app for visualising data from a WhatsApp chat.
 
-The current version can be used [here](https://nating.github.io/whatsapp-stats) for chats exported from iOS.
+The current version can be used [here](https://geoffnatin.com/whatsapp-stats) for chats exported from iOS.
 
 ## Overview
 WhatsApp offers users the ability to export chats as text files.  
