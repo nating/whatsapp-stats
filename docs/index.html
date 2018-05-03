@@ -1,32 +1,224 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
-<link rel="stylesheet" href="whatsapp-stats.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Visualize data from WhatsApp chats.">
+    <meta name="author" content="Geoffrey Natin">
+    <title>WhatsApp Stats</title>
+		<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+		<link rel="stylesheet" href="whatsapp-stats.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-	<div id="title">WhatsApp Stats</div>
-	<!-- This is where different queryies can be selected (once the app has the functionality of different queries!)
-	<div class="topnav" id="myTopnav">
-		<a href="#home">Visualize new chat</a>
-		<a href="#users">Users</a>
-		<a href="#chat">Overview</a>
-		<a href="#about">Chat Content</a>
-		<a href="#about">Activity</a>
-	</div>
-	-->
-	<div id="main-content">
-		<div id="query-title" style=" margin:10px">Select the chat .txt file to see the data. (Your chat data will not be sent to anyone or leave your device at all!)</div>
-		<input type="file" id="files" name="files[]" accept=".txt" margin="auto"/>
-		<div id="drop_zone"><img src="cloud.png" width="150px" margin="auto"></img></div>
-		<output id="list"></output>
-		<button id="visualiseButton" type="button" onclick="visualise(); seeActivityCountForUsers();" disabled>Visualize!</button>
+	<div id="main-content" style="padding:20px;">
+
+			<!-- Uncomment for chat uploading functionality
+			<div id="query-title" style=" margin:10px">Select the chat .txt file to see the data. (Your chat data will not be sent to anyone or leave your device at all!)</div>
+			<input type="file" id="files" name="files[]" accept=".txt" margin="auto"/>
+			<div id="drop_zone"><img src="cloud.png" width="150px" margin="auto"></img></div>
+			<output id="list"></output>
+			<button id="visualiseButton" type="button" onclick="visualise();" disabled>Visualize!</button>
+			-->
+			<div id="files"/>
+
+					<div class="row">
+							<div class="col-lg-12">
+									<h1 class="page-header text-left">WhatsApp Stats</h1>
+									<button style="background-color:red;" onclick="displayTestData();">Display test data</button>
+							</div>
+					</div>
+
+					<div class="row">
+							<div class="col-lg-4">
+									<div class="panel panel-default">
+											<div class="panel-body">
+													<div class="flot-chart text-left">
+															<h2 id="chat-subject"></h2>
+															<ul id="members-list">
+															</ul>
+													</div>
+											</div>
+									</div>
+							</div>
+
+
+									<div class="col-lg-8">
+											<div class="panel panel-default">
+													<div class="panel-body">
+															<div class="flot-chart">
+																	<div class="flot-chart-content" id="flot-line-chart"></div>
+																	<canvas id="canvas" ></canvas>
+															</div>
+													</div>
+											</div>
+									</div>
+
+
+											<div class="col-lg-12">
+													<div class="panel panel-default">
+															<div class="panel-body">
+																	<div class="flot-chart text-left">
+																			<p>Total Activity: <span id="total"></span></p>
+																			<p>Text Messages: <span id="texts"></span></p>
+																			<p>Audio Messages: <span id="audios"></span></p>
+																			<p>Videos: <span id="videos"></span></p>
+																			<p>Images: <span id="images"></span></p>
+																	</div>
+															</div>
+													</div>
+											</div>
+
+							<div class="col-lg-6">
+									<div class="panel panel-default">
+											<div class="panel-heading">
+													Pie Chart Example
+											</div>
+											<div class="panel-body">
+													<div class="flot-chart">
+															<div class="flot-chart-content" id="flot-pie-chart"></div>
+															<canvas id="chart-area" ></canvas>
+													</div>
+											</div>
+									</div>
+							</div>
+
+							<div class="col-lg-6">
+									<div class="panel panel-default">
+											<div class="panel-heading">
+													Multiple Axes Line Chart Example
+											</div>
+											<div class="panel-body">
+													<div class="flot-chart">
+															<div class="flot-chart-content" id="flot-line-chart-multi"></div>
+															<canvas id="myChart" width="200" height="200"></canvas>
+													</div>
+											</div>
+									</div>
+							</div>
+
+							<div class="col-lg-6">
+									<div class="panel panel-default">
+											<div class="panel-heading">
+													Moving Line Chart Example
+											</div>
+											<div class="panel-body">
+													<div class="flot-chart">
+															<div class="flot-chart-content" id="flot-line-chart-moving"></div>
+													</div>
+											</div>
+									</div>
+							</div>
+
+							<div class="col-lg-6">
+									<div class="panel panel-default">
+											<div class="panel-heading">
+													Bar Chart Example
+											</div>
+											<div class="panel-body">
+													<div class="flot-chart">
+															<div class="flot-chart-content" id="flot-bar-chart"></div>
+													</div>
+											</div>
+									</div>
+							</div>
+			</div>
 	</div>
 </body>
-<script src="chat-parse.js"></script>
-<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="./js/logic.js"></script>
+<script src="./js/chat-parse-ios.js"></script>
+<script src="./js/charts.js"></script>
+<script src="./js/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+<script>
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+
+
+	<!-- pie Chart example -->
+	<script>
+
+
+		var colorNames = {red:'red',orange:'orange',yellow:'yellow',green:'green',blue:'blue',purple:'purple',grey:'grey'}
+
+		var randomScalingFactor = function() {
+			return Math.round(Math.random() * 100);
+		};
+
+		var config_pie = {
+			type: 'pie',
+			data: {
+				datasets: [{
+					data: [
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+					],
+					backgroundColor: [
+						colorNames.red,
+						colorNames.orange,
+						colorNames.yellow,
+						colorNames.green,
+						colorNames.blue,
+					],
+					label: 'Dataset 1'
+				}],
+				labels: [
+					'Red',
+					'Orange',
+					'Yellow',
+					'Green',
+					'Blue'
+				]
+			},
+			options: {
+				responsive: true
+			}
+		};
+			var ctx_pie = document.getElementById('chart-area').getContext('2d');
+			window.myPie = new Chart(ctx_pie, config_pie);
+
+	</script>
+
+
 </html>
-
-
-
-
