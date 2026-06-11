@@ -188,8 +188,6 @@ function seeActivityCountForUsers(){
         mainc.parentNode.appendChild(barChart, mainc);
 
 
-        //users = [{"name":"nating","total":30643,"texts":503,"images":132,"other":128},{"name":"Jack","total":29736,"texts":844,"images":287,"other":106},{"name":"Fetty Wap","total":32779,"texts":1725,"images":114,"other":131}];
-        
         initStackedBarChart.draw({
             data: users,
             label: 'name',
